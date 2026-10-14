@@ -57,3 +57,9 @@ footer{border-top:1px solid var(--line);padding:40px 0}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.card{transition:none}}
 @media(min-width:900px){.hero-photo{background-size:auto 112%;background-position:108% 20%;background-repeat:no-repeat}}
 @media(min-width:900px){.hero-photo{-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 62%);mask-image:linear-gradient(90deg,transparent 30%,#000 62%)}}
+.bio p{margin-bottom:1.1rem;color:#C9CCD6}
+.bio .lead{font-size:1.35rem;line-height:1.35;color:var(--text);font-weight:500}
+.bio .where{color:var(--gold);margin:1.5rem 0 0}
+.foot nav{flex-wrap:wrap}
+.portrait img{object-position:50% 25%}
+.nav{background:#0A0B0Ecc;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
