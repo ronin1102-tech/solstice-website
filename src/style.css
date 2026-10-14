@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-obsidian: #0A0B0E;
+  --accent-blue: #3B82F6;
+  --accent-gold-corona: #F59E0B;
+  --accent-gold-light: #FCD34D;
+  --text-primary: #F3F4F6;
+  --text-muted: #9CA3AF;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+}
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-obsidian: var(--bg-obsidian);
+  --color-eclipse-blue: var(--accent-blue);
+  --color-corona: var(--accent-gold-corona);
+  --color-corona-light: var(--accent-gold-light);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-obsidian);
+}
+
+body {
+  margin: 0;
+  background: var(--bg-obsidian);
+  color: var(--text-primary);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Hero parallax: GPU-promoted layer, transform is set from main.ts */
+.parallax-layer {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.hero-fade {
+  background:
+    linear-gradient(to bottom, rgba(10, 11, 14, 0.35) 0%, rgba(10, 11, 14, 0.55) 55%, var(--bg-obsidian) 100%);
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  transition: transform 0.15s ease-out, border-color 0.2s ease, box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card:hover {
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 20px 50px -20px rgba(245, 158, 11, 0.25);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.badge-shipping {
+  color: var(--accent-blue);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.badge-dev {
+  color: var(--accent-gold-corona);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.badge-oss {
+  color: var(--text-muted);
+  background: rgba(156, 163, 175, 0.1);
+  border: 1px solid rgba(156, 163, 175, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card { transition: none; }
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0B0E" />
+    <meta name="description" content="Solstice Audio. Local-first software. No cloud. No subscriptions." />
+    <title>Solstice</title>
+    <link rel="preload" href="/fonts/SpaceGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/hero-macbook.jpg" as="image" fetchpriority="high" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body class="bg-obsidian text-gray-100">
+    <!-- 1. HERO -->
+    <header id="hero" class="relative h-screen w-full overflow-hidden bg-obsidian">
+      <div id="hero-parallax" class="parallax-layer absolute inset-0 -top-[10%] h-[120%]">
+        <img
+          src="/hero-macbook.jpg"
+          alt="A MacBook at a three-quarter angle, its screen glowing in a dark room"
+          class="h-full w-full object-cover object-[50%_62%] md:object-[50%_58%]"
+          fetchpriority="high"
+          decoding="async"
+          width="1600"
+          height="2125"
+        />
+      </div>
+      <div class="hero-fade absolute inset-0"></div>
+
+      <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+        <h1 class="font-display text-4xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+          Built on this. Runs on yours.
+        </h1>
+        <p class="mt-5 max-w-xl text-base text-[var(--text-muted)] sm:text-lg">
+          Local-first software. No cloud. No subscriptions.
+        </p>
+        <a
+          href="#products"
+          class="mt-9 inline-block rounded-full bg-[var(--accent-gold-corona)] px-8 py-3 font-semibold text-black transition hover:bg-[var(--accent-gold-light)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent-gold-light)]"
+        >
+          See what we built
+        </a>
+      </div>
+    </header>
+
+    <!-- 2. ECLIPSE CANVAS -->
+    <canvas id="eclipse-canvas" class="w-full h-[400px] block" aria-hidden="true"></canvas>
+
+    <main>
+      <!-- 3. BIO -->
+      <section id="builder" class="mx-auto max-w-6xl px-6 py-24">
+        <div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-widest text-[var(--accent-gold-corona)]">The Builder</p>
+            <h2 class="font-display mt-3 text-3xl font-bold sm:text-4xl">Tracy Weaver</h2>
+            <p class="mt-1 text-[var(--text-muted)]">Founder, Solstice</p>
+            <p class="mt-6 text-lg text-gray-200">
+              Warehouse by night, builder by nature. Honest software built with intent.
+            </p>
+          </div>
+          <blockquote class="font-display border-l-2 border-[var(--accent-gold-corona)] pl-6 text-2xl font-medium leading-snug sm:text-3xl">
+            People aren't buying in because they like the product. They're buying in because they want to be inside of what we have to offer.
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- 4. PHILOSOPHY -->
+      <section id="philosophy" class="mx-auto max-w-6xl px-6 pb-24">
+        <h2 class="font-display mb-10 text-3xl font-bold sm:text-4xl">Philosophy</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3" style="perspective: 1000px">
+          <article class="card tilt p-7">
+            <h3 class="font-display text-xl font-semibold">Local-First</h3>
+            <p class="mt-3 text-[var(--text-muted)]">Complete operational independence on your machine.</p>
+          </article>
+          <article class="card tilt p-7">
+            <h3 class="font-display text-xl font-semibold">Perpetual Ownership</h3>
+            <p class="mt-3 text-[var(--text-muted)]">Buy once, run forever. No monthly tolls.</p>
+          </article>
+          <article class="card tilt p-7">
+            <h3 class="font-display text-xl font-semibold">No Hardware Left Behind</h3>
+            <p class="mt-3 text-[var(--text-muted)]">High-efficiency engineering running smoothly on modern and legacy chips.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5. PRODUCTS -->
+      <section id="products" class="mx-auto max-w-6xl scroll-mt-8 px-6 pb-28">
+        <h2 class="font-display mb-10 text-3xl font-bold sm:text-4xl">Products</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article class="card p-7">
+            <span class="badge badge-shipping">Shipping</span>
+            <h3 class="font-display mt-4 text-xl font-semibold">Solstice Voice</h3>
+            <p class="mt-2 text-[var(--text-muted)]">$49 — One-Time / Lifetime Updates</p>
+          </article>
+          <article class="card p-7">
+            <span class="badge badge-dev">In Development</span>
+            <h3 class="font-display mt-4 text-xl font-semibold">SolsticeDocs</h3>
+            <p class="mt-2 text-[var(--text-muted)]">In Development</p>
+          </article>
+          <article class="card p-7">
+            <span class="badge badge-oss">Open Source</span>
+            <h3 class="font-display mt-4 text-xl font-semibold">Grammar Tool</h3>
+            <p class="mt-2 text-[var(--text-muted)]">Open Source</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- 6. FOOTER -->
+    <footer class="border-t border-[var(--card-border)] px-6 py-10">
+      <nav class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-[var(--text-muted)] sm:flex-row" aria-label="Footer">
+        <span>&copy; Solstice</span>
+        <ul class="flex flex-wrap items-center justify-center gap-6">
+          <li><a class="hover:text-white" href="https://github.com/REPLACE_ME" rel="noopener">GitHub</a></li>
+          <li><a class="hover:text-white" href="mailto:REPLACE_ME@example.com">Contact</a></li>
+          <li><a class="hover:text-white" href="https://REPLACE_ME" rel="noopener">Social</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
