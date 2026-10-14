@@ -1,0 +1,57 @@
+:root{--obsidian:#0A0B0E;--ink:#12141A;--blue:#3B82F6;--gold:#E8B84A;--text:#E9EAEE;--muted:#8B90A0;--line:#222633}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--obsidian);color:var(--text);font:17px/1.6 "Space Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+.gold{color:var(--gold)}
+.eyebrow{color:var(--blue);text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;margin-bottom:1.5rem}
+h1,h2,h3{font-weight:700;line-height:1.05;letter-spacing:-.02em}
+.nav{position:fixed;inset:0 0 auto;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:linear-gradient(#0A0B0Ecc,transparent)}
+.nav nav{display:flex;gap:20px;font-size:.9rem;color:var(--muted)}
+.nav nav a:hover{color:var(--text)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand-mark{width:18px;height:18px;border-radius:50%;background:var(--obsidian);box-shadow:0 0 0 2px var(--gold),0 0 12px var(--gold)}
+@media(max-width:560px){.nav nav a:not(:last-child){display:none}}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-photo{position:absolute;inset:-10% 0;background:radial-gradient(ellipse at 65% 45%,#1b2a4a 0,#0f1422 35%,var(--obsidian) 70%) center/cover;
+  background-image:url(assets/hero-macbook.jpg),radial-gradient(ellipse at 65% 45%,#1b2a4a 0,#0f1422 35%,var(--obsidian) 70%);will-change:transform}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#0A0B0Ee6,#0A0B0E33 60%),linear-gradient(transparent 60%,var(--obsidian))}
+.hero-copy{position:relative;width:min(1080px,100% - 40px);margin:0 auto;padding-bottom:12vh}
+.hero h1{font-size:clamp(2.6rem,8vw,6rem)}
+.sub{margin:1.5rem 0 2rem;color:var(--muted);max-width:30ch;font-size:1.15rem}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;background:var(--blue);font-weight:500;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px #3B82F666}
+
+.eclipse{height:70vh;position:relative;background:var(--obsidian)}
+.eclipse canvas{width:100%;height:100%;display:block}
+
+.bio{padding:12vh 0}
+.bio-grid{display:grid;gap:40px;grid-template-columns:1fr;align-items:center}
+@media(min-width:760px){.bio-grid{grid-template-columns:5fr 6fr}}
+.portrait{aspect-ratio:4/5;border-radius:16px;border:1px solid var(--line);background:var(--ink);position:relative;overflow:hidden;display:grid;place-items:center}
+.portrait::before{content:attr(data-slot);color:var(--muted);font-size:.85rem}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bio h2{font-size:clamp(2.2rem,5vw,3.5rem)}
+.role{color:var(--gold);margin:.5rem 0 1.5rem}
+.pull{margin-top:12vh;font-size:clamp(1.6rem,4vw,2.9rem);line-height:1.2;font-weight:500;letter-spacing:-.015em;border-left:3px solid var(--gold);padding-left:clamp(16px,3vw,40px)}
+.pull cite{display:block;margin-top:1.5rem;font-size:.9rem;font-style:normal;color:var(--muted)}
+
+.philosophy,.products{padding:10vh 0}
+.cards,.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card,.product{background:var(--ink);border:1px solid var(--line);border-radius:16px;padding:32px}
+.card{transform-style:preserve-3d;transition:transform .15s ease-out,border-color .3s,box-shadow .3s}
+.card:hover{border-color:#E8B84A66;box-shadow:0 20px 50px #0008,0 0 40px #E8B84A14}
+.num{color:var(--gold);font-size:.85rem}
+.card h3{font-size:1.6rem;margin:3rem 0 .75rem}
+.card p,.product p{color:var(--muted)}
+.product h3{font-size:1.6rem;margin:1.2rem 0 .5rem}
+.badge{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border-radius:999px;border:1px solid}
+.live{color:#4ADE80}.dev{color:var(--gold)}.oss{color:var(--blue)}
+
+footer{border-top:1px solid var(--line);padding:40px 0}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.foot nav{display:flex;gap:24px;color:var(--muted)}
+.foot nav a:hover{color:var(--text)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.card{transition:none}}
