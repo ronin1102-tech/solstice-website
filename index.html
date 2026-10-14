@@ -6,6 +6,21 @@
 <title>Solstice AI — Built on this. Runs on yours.</title>
 <meta name="description" content="Solstice builds local-first software. No cloud, no subscriptions, no hardware left behind.">
 <meta name="theme-color" content="#0A0B0E">
+<link rel="canonical" href="https://ronin1102-tech.github.io/solstice-website/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Solstice AI">
+<meta property="og:url" content="https://ronin1102-tech.github.io/solstice-website/">
+<meta property="og:title" content="Solstice AI — Built on this. Runs on yours.">
+<meta property="og:description" content="Local-first software. No cloud, no subscriptions, no hardware left behind.">
+<meta property="og:image" content="https://ronin1102-tech.github.io/solstice-website/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A MacBook glowing in a dark room, its screen full of code">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Solstice AI — Built on this. Runs on yours.">
+<meta name="twitter:description" content="Local-first software. No cloud, no subscriptions, no hardware left behind.">
+<meta name="twitter:image" content="https://ronin1102-tech.github.io/solstice-website/assets/og-image.jpg">
+<meta name="twitter:image:alt" content="A MacBook glowing in a dark room, its screen full of code">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%230A0B0E' stroke='%23E8B84A' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +28,13 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="nav">
-  <a class="brand" href="#top" aria-label="Solstice AI home"><span class="brand-mark"></span>Solstice AI</a>
-  <nav><a href="#builder">Builder</a><a href="#philosophy">Philosophy</a><a href="#products">Products</a><a href="#contact">Contact</a></nav>
+  <a class="brand" href="#main" aria-label="Solstice AI home"><span class="brand-mark"></span>Solstice AI</a>
+  <nav aria-label="Primary"><a href="#builder">Builder</a><a href="#philosophy">Philosophy</a><a href="#products">Products</a><a href="#contact">Contact</a></nav>
 </header>
 
-<main id="top">
+<main id="main" tabindex="-1">
   <section class="hero" id="hero">
     <div class="hero-photo" data-parallax role="img" aria-label="A MacBook glowing in a dark room"></div>
     <div class="hero-shade"></div>
@@ -35,8 +51,8 @@
 
   <section class="bio" id="builder">
     <div class="wrap bio-grid">
-      <figure class="portrait" data-slot="Bio photo goes here">
-        <img src="assets/bio.jpg" alt="Tracy Weaver, founder of Solstice" onerror="this.remove()">
+      <figure class="portrait">
+        <img src="assets/bio.jpg" alt="Tracy Weaver, founder of Solstice" width="900" height="1125" loading="lazy" decoding="async" onerror="this.remove()">
       </figure>
       <div>
         <p class="eyebrow">The Builder</p>
@@ -50,14 +66,14 @@
       </div>
     </div>
     <blockquote class="wrap pull">
-      People aren't buying in because they like the product. They're buying in because they want to be inside of what we have to offer.
+      <p>People aren't buying in because they like the product. They're buying in because they want to be inside of what we have to offer.</p>
       <cite>The Solstice Way</cite>
     </blockquote>
   </section>
 
   <section class="philosophy" id="philosophy">
     <div class="wrap">
-      <p class="eyebrow">Philosophy</p>
+      <h2 class="eyebrow">Philosophy</h2>
       <div class="cards">
         <article class="card tilt"><span class="num">01</span><h3>Local-First</h3><p>Your data and your compute stay on your machine.</p></article>
         <article class="card tilt"><span class="num">02</span><h3>Perpetual Ownership</h3><p>Pay once. It's yours, with lifetime updates.</p></article>
@@ -68,11 +84,33 @@
 
   <section class="products" id="products">
     <div class="wrap">
-      <p class="eyebrow">Products</p>
+      <h2 class="eyebrow">Products</h2>
+      <p class="section-title">Three tools. One rule: <span class="gold">it runs on your machine.</span></p>
       <div class="grid">
-        <article class="product"><span class="badge live">Shipping</span><h3>Solstice Voice</h3><p>$49 one-time. Lifetime updates.</p></article>
-        <article class="product"><span class="badge dev">In development</span><h3>SolsticeDocs</h3><p>Local-first documents, built the Solstice way.</p></article>
-        <article class="product"><span class="badge oss">Open source</span><h3>Grammar tool</h3><p>Free and open, on GitHub.</p></article>
+        <article class="product spot">
+          <div class="art art-voice" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i><i style="--i:15"></i><i style="--i:16"></i><i style="--i:17"></i><i style="--i:18"></i><i style="--i:19"></i><i style="--i:20"></i><i style="--i:21"></i></div>
+          <span class="badge live">Shipping</span>
+          <h3><a class="stretch" href="voice/">Solstice Voice</a></h3>
+          <p class="tag">Talk. It's typed.</p>
+          <p>Local dictation in any app. $49 one-time, lifetime updates.</p>
+          <span class="more" aria-hidden="true">Explore Voice <b>→</b></span>
+        </article>
+        <article class="product spot">
+          <div class="art art-docs" aria-hidden="true"><span class="sheet back"></span><span class="sheet"><i></i><i></i><i class="hl"></i><i></i><i class="short"></i></span></div>
+          <span class="badge dev">In development</span>
+          <h3><a class="stretch" href="docs/">SolsticeDocs</a></h3>
+          <p class="tag">Your documents. Your machine. Your rules.</p>
+          <p>A PDF workspace that saves everything locally.</p>
+          <span class="more" aria-hidden="true">See the vision <b>→</b></span>
+        </article>
+        <article class="product spot">
+          <div class="art art-grammar" aria-hidden="true"><span class="line">This is <span class="swap"><span class="bad">a obvious</span><span class="good">an obvious</span></span> test.</span></div>
+          <span class="badge oss">Open source</span>
+          <h3><a class="stretch" href="grammar/">Grammar tool</a></h3>
+          <p class="tag">Grammarly, without the cloud.</p>
+          <p>Free, open, and every word stays on your machine.</p>
+          <span class="more" aria-hidden="true">How it works <b>→</b></span>
+        </article>
       </div>
     </div>
   </section>
@@ -81,7 +119,7 @@
 <footer id="contact">
   <div class="wrap foot">
     <span class="brand"><span class="brand-mark"></span>Solstice AI</span>
-    <nav><a href="mailto:ronin1102@gmail.com">ronin1102@gmail.com</a><a href="https://github.com/ronin1102-tech">GitHub</a><a href="https://instagram.com/solsticeaudio_dsp" rel="noopener">Instagram · Audio</a><a href="https://instagram.com/sol_sticeai" rel="noopener">Instagram · AI</a></nav>
+    <nav aria-label="Contact"><a href="mailto:ronin1102@gmail.com">ronin1102@gmail.com</a><a href="https://github.com/ronin1102-tech">GitHub</a><a href="https://instagram.com/solsticeaudio_dsp" rel="noopener">Instagram · Audio</a><a href="https://instagram.com/sol_sticeai" rel="noopener">Instagram · AI</a></nav>
   </div>
 </footer>
 <script type="module" src="main.js"></script>

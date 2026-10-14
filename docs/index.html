@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SolsticeDocs — Your documents. Your machine. Your rules.</title>
+<meta name="description" content="A local-first PDF workspace. Import any PDF, annotate freely, and everything saves to a SQLite database on your machine. In development.">
+<meta name="theme-color" content="#0A0B0E">
+<link rel="canonical" href="https://ronin1102-tech.github.io/solstice-website/docs/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Solstice AI">
+<meta property="og:url" content="https://ronin1102-tech.github.io/solstice-website/docs/">
+<meta property="og:title" content="SolsticeDocs — Your documents. Your machine. Your rules.">
+<meta property="og:description" content="A PDF workspace that treats your documents like they belong to you. In development.">
+<meta property="og:image" content="https://ronin1102-tech.github.io/solstice-website/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SolsticeDocs — Your documents. Your machine. Your rules.">
+<meta name="twitter:description" content="A PDF workspace that treats your documents like they belong to you. In development.">
+<meta name="twitter:image" content="https://ronin1102-tech.github.io/solstice-website/assets/og-image.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%230A0B0E' stroke='%23E8B84A' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../product.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="brand" href="../" aria-label="Solstice AI home"><span class="brand-mark"></span>Solstice AI</a>
+  <nav class="crumbs" aria-label="Breadcrumb"><a class="mid" href="../#products">Products</a><span class="mid" aria-hidden="true">/</span><span aria-current="page">SolsticeDocs</span></nav>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="p-hero" style="--glow:#E8B84A1a">
+    <div class="wrap">
+      <div>
+        <span class="badge dev">In development</span>
+        <h1>SolsticeDocs</h1>
+        <p class="tagline">Your documents. Your machine. Your rules.</p>
+        <p class="story">A PDF workspace that treats your documents like they belong to you — because they do. Import any PDF, annotate freely, and everything saves locally in a SQLite database on your machine. No cloud sync. No account. No “upload to continue.”</p>
+        <div class="actions">
+          <a class="btn" href="mailto:ronin1102@gmail.com?subject=Notify%20me%3A%20SolsticeDocs%20launch">Get notified</a>
+          <a class="btn ghost" href="#preview">See what's built</a>
+        </div>
+      </div>
+      <div class="art art-docs" aria-hidden="true"><span class="sheet back"></span><span class="sheet"><i></i><i></i><i class="hl"></i><i></i><i class="short"></i></span></div>
+    </div>
+  </section>
+
+  <section class="p-sec">
+    <div class="wrap">
+      <p class="eyebrow reveal">The vision</p>
+      <h2 class="reveal">If you live in PDFs, this is your home base.</h2>
+      <p class="intro reveal">Built for readers and researchers. Your library lives in a real database on your own disk — queryable, portable, yours. Mark it up the way you think, and take your marks with you when you share.</p>
+      <div class="persist reveal" data-persist aria-hidden="true">
+        <div class="page-mock"><i></i><i class="mk" data-page="3"></i><i></i><i></i><i></i><i class="mk ul" data-page="3"></i><i></i><i></i><i class="mk" data-page="4"></i><i></i><i></i><i></i></div>
+        <div class="db">
+          <p class="q">sqlite&gt; SELECT * FROM annotations;</p>
+          <table><thead><tr><th>id</th><th>kind</th><th>page</th><th>color</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-sec" id="preview">
+    <div class="wrap">
+      <p class="eyebrow reveal">Feature preview</p>
+      <h2 class="reveal">Where it stands today.</h2>
+      <p class="intro reveal">The core loop — import, annotate, persist, export — is built and running on real hardware. Final checks are underway.</p>
+      <div class="tiles">
+        <div class="tile spot reveal" style="--d:0"><span class="state">Built</span><h3>Import any PDF</h3><p>Open it straight from your disk. No conversion, no upload.</p></div>
+        <div class="tile spot reveal" style="--d:1"><span class="state">Built</span><h3>Annotate natively</h3><p>Highlights and underlines that persist across sessions.</p></div>
+        <div class="tile spot reveal" style="--d:2"><span class="state">Built</span><h3>SQLite under the hood</h3><p>Every mark is a row in a database on your machine.</p></div>
+        <div class="tile spot reveal" style="--d:3"><span class="state testing">Final testing</span><h3>Export with your marks</h3><p>Annotations flatten into the PDF on export. What you see is what you share.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-sec">
+    <div class="wrap">
+      <p class="eyebrow reveal">Local-first, for real</p>
+      <h2 class="reveal">Zero network at runtime.</h2>
+      <p class="intro reveal">Not “we don't sell your data.” No network at all: no CDN assets, no web fonts, no telemetry, no updater phoning home. And it's built and tested on macOS Catalina — the same 2012 MacBook Pro the rest of Solstice ships from.</p>
+      <div class="tiles">
+        <div class="tile spot reveal" style="--d:0"><span class="num">01</span><h3>Local-First</h3><p>Your documents and your library never leave your disk.</p></div>
+        <div class="tile spot reveal" style="--d:1"><span class="num">02</span><h3>Perpetual Ownership</h3><p>Your annotations live in an open format you can query yourself.</p></div>
+        <div class="tile spot reveal" style="--d:2"><span class="num">03</span><h3>No Hardware Left Behind</h3><p>Built on a fourteen-year-old laptop, for every machine that came after it.</p></div>
+      </div>
+      <div class="chips reveal"><span>Tauri 2</span><span>React</span><span>Rust</span><span>SQLite</span><span>macOS 10.15+</span></div>
+    </div>
+  </section>
+
+  <section class="p-sec cta-band">
+    <div class="wrap">
+      <p class="eyebrow reveal">Notify me</p>
+      <h2 class="reveal">Be first when it ships.</h2>
+      <p class="intro reveal">One email when SolsticeDocs launches. That's it.</p>
+      <div class="actions reveal">
+        <a class="btn" href="mailto:ronin1102@gmail.com?subject=Notify%20me%3A%20SolsticeDocs%20launch">Get notified</a>
+        <a class="btn ghost" href="https://github.com/ronin1102-tech/SolsticeDocs">Follow on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap next-prod">
+    <a href="../grammar/">← Grammar tool</a>
+    <a href="../voice/">Next: Solstice Voice →</a>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="wrap foot">
+    <a class="brand" href="../"><span class="brand-mark"></span>Solstice AI</a>
+    <nav aria-label="Contact"><a href="mailto:ronin1102@gmail.com">ronin1102@gmail.com</a><a href="https://github.com/ronin1102-tech">GitHub</a><a href="https://instagram.com/solsticeaudio_dsp" rel="noopener">Instagram · Audio</a><a href="https://instagram.com/sol_sticeai" rel="noopener">Instagram · AI</a></nav>
+  </div>
+</footer>
+<script type="module" src="../product.js"></script>
+</body>
+</html>

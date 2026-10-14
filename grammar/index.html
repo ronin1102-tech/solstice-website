@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grammar tool — Grammarly, without the cloud.</title>
+<meta name="description" content="Free, open-source grammar checking for macOS. A Chrome extension talks to LanguageTool running on your own machine. Every word stays local.">
+<meta name="theme-color" content="#0A0B0E">
+<link rel="canonical" href="https://ronin1102-tech.github.io/solstice-website/grammar/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Solstice AI">
+<meta property="og:url" content="https://ronin1102-tech.github.io/solstice-website/grammar/">
+<meta property="og:title" content="Grammar tool — Grammarly, without the cloud.">
+<meta property="og:description" content="Free and open source. Your words never leave your machine.">
+<meta property="og:image" content="https://ronin1102-tech.github.io/solstice-website/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Grammar tool — Grammarly, without the cloud.">
+<meta name="twitter:description" content="Free and open source. Your words never leave your machine.">
+<meta name="twitter:image" content="https://ronin1102-tech.github.io/solstice-website/assets/og-image.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%230A0B0E' stroke='%23E8B84A' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../product.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="brand" href="../" aria-label="Solstice AI home"><span class="brand-mark"></span>Solstice AI</a>
+  <nav class="crumbs" aria-label="Breadcrumb"><a class="mid" href="../#products">Products</a><span class="mid" aria-hidden="true">/</span><span aria-current="page">Grammar tool</span></nav>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="p-hero">
+    <div class="wrap">
+      <div>
+        <span class="badge oss">Free &amp; open source</span>
+        <h1>Grammar tool</h1>
+        <p class="tagline">Grammarly, without the cloud.</p>
+        <p class="story">A grammar checker that doesn't send your writing to someone else's server. It runs a local LanguageTool instance, checks your grammar as you type in Chrome, and keeps every word on your machine.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/ronin1102-tech/grammar-tool">View on GitHub</a>
+          <a class="btn ghost" href="#install">Install it</a>
+        </div>
+      </div>
+      <div class="art art-grammar">
+        <p class="try">This is <button class="fix" type="button" data-fix="an obvious" aria-label="Grammar issue: a obvious. Apply fix">a obvious</button> test.<small>Click the underline — that's the whole workflow.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-sec">
+    <div class="wrap">
+      <p class="eyebrow reveal">Why</p>
+      <h2 class="reveal">The problem with cloud grammar checkers.</h2>
+      <p class="intro reveal">To check your writing, most grammar tools send it to their servers. Every email, every draft, every message — read by a machine you don't own.</p>
+      <div class="tiles">
+        <div class="tile spot reveal" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24"><path d="M7 18a5 5 0 1 1 1-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8z"/></svg></span><h3>The cloud</h3><p>Your text travels to a server to be checked. Here, it travels to <code>127.0.0.1</code> and stops.</p></div>
+        <div class="tile spot reveal" style="--d:1"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><h3>The subscription</h3><p>Premium writing help usually means a monthly bill. This is free — forever, and in the open.</p></div>
+        <div class="tile spot reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><h3>The data</h3><p>No account, no cloud processing, no data collection. Your words stay yours.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-sec">
+    <div class="wrap">
+      <p class="eyebrow reveal">How it works</p>
+      <h2 class="reveal">Three pieces. One machine.</h2>
+      <p class="intro reveal">A Chrome extension sends the text you're editing to LanguageTool running on localhost. The answer comes back as underlines. Nothing else is in the loop.</p>
+      <figure class="arch reveal">
+        <svg viewBox="0 0 900 300" role="img" aria-labelledby="arch-t">
+          <title id="arch-t">Chrome extension talks to localhost port 8081, where LanguageTool runs. The internet is not involved.</title>
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#E8B84A"/></linearGradient></defs>
+          <rect x="20" y="20" width="860" height="200" rx="18" fill="none" stroke="#222633" stroke-dasharray="4 6"/>
+          <text x="40" y="50" fill="#8B90A0" font-size="13" letter-spacing="2">YOUR MAC</text>
+          <rect x="50" y="80" width="220" height="110" rx="14" fill="#12141A" stroke="#3B82F6"/>
+          <text x="160" y="125" fill="#E9EAEE" font-size="18" font-weight="700" text-anchor="middle">Chrome extension</text>
+          <text x="160" y="152" fill="#8B90A0" font-size="13" text-anchor="middle">underlines · one-click fix</text>
+          <rect x="340" y="80" width="220" height="110" rx="14" fill="#12141A" stroke="#222633"/>
+          <text x="450" y="125" fill="#E9EAEE" font-size="18" font-weight="700" text-anchor="middle">localhost:8081</text>
+          <text x="450" y="152" fill="#8B90A0" font-size="13" text-anchor="middle">127.0.0.1 only</text>
+          <rect x="630" y="80" width="220" height="110" rx="14" fill="#12141A" stroke="#E8B84A"/>
+          <text x="740" y="125" fill="#E9EAEE" font-size="18" font-weight="700" text-anchor="middle">LanguageTool 6.6</text>
+          <text x="740" y="152" fill="#8B90A0" font-size="13" text-anchor="middle">the grammar engine</text>
+          <path class="flow" d="M272 122 H338" stroke="url(#g)" stroke-width="3" fill="none"/>
+          <path class="flow" d="M562 122 H628" stroke="url(#g)" stroke-width="3" fill="none"/>
+          <path class="flow" d="M628 150 H562 M338 150 H272" stroke="#E8B84A" stroke-width="2" fill="none" opacity=".6"/>
+          <text x="450" y="268" fill="#8B90A0" font-size="14" text-anchor="middle">The internet</text>
+          <path d="M450 222 V246" stroke="#F87171" stroke-width="2" stroke-dasharray="3 4"/>
+          <path d="M440 232 l20 0" stroke="#F87171" stroke-width="2.5" transform="rotate(45 450 232)"/>
+          <path d="M440 232 l20 0" stroke="#F87171" stroke-width="2.5" transform="rotate(-45 450 232)"/>
+        </svg>
+      </figure>
+      <ul class="facts">
+        <li class="reveal">The engine binds to <b>127.0.0.1 only</b>. A full-life network audit of the server process showed zero bytes in or out.</li>
+        <li class="reveal">The extension's permissions allow only <b>localhost</b> — Chrome blocks every other origin, so it can't phone home even by accident.</li>
+        <li class="reveal">Password and credit-card fields are <b>skipped</b> before any text is sent.</li>
+        <li class="reveal">It <b>never rewrites your text</b> without your click.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="p-sec" id="install">
+    <div class="wrap">
+      <p class="eyebrow reveal">Install</p>
+      <h2 class="reveal">Five steps, one time.</h2>
+      <p class="intro reveal">Every command here was run on the target machine — a 2012 MacBook Pro on Catalina. The full guide lives in the repo's README.</p>
+      <ol class="steps">
+        <li class="reveal"><div><h3>Get the repo</h3><div class="code"><code>git clone https://github.com/ronin1102-tech/grammar-tool.git
+cd grammar-tool</code></div></div></li>
+        <li class="reveal"><div><h3>Fetch the engine</h3><p>Downloads pinned LanguageTool and Java, verifies both by checksum, then runs a real grammar check as a smoke test. About five minutes.</p><div class="code"><code>sh scripts/fetch-engine.sh</code></div></div></li>
+        <li class="reveal"><div><h3>Build the launcher</h3><p>Produces <code>LWA.app</code> in the project folder.</p><div class="code"><code>sh scripts/make-app.sh</code></div></div></li>
+        <li class="reveal"><div><h3>Start the engine</h3><p>The first time, right-click <code>LWA.app</code> → Open. After that, double-click. You'll get a “Writing engine ready.” notification.</p></div></li>
+        <li class="reveal"><div><h3>Load the extension</h3><p>Open <code>chrome://extensions</code>, turn on Developer mode, click Load unpacked and pick the repo's <code>extension/</code> folder. It shows up as Local Writing Assistant. Reload any open tabs once.</p></div></li>
+      </ol>
+      <div class="req reveal"><span><b>macOS</b> Catalina 10.15+</span><span><b>Chrome</b> 128</span><span><b>Disk</b> ~1.4 GB</span><span><b>Admin password</b> not needed</span></div>
+    </div>
+  </section>
+
+  <section class="p-sec cta-band">
+    <div class="wrap">
+      <p class="eyebrow reveal">Contribute</p>
+      <h2 class="reveal">Read the code. Fork it. Make it yours.</h2>
+      <p class="intro reveal">Tracy's first public repo — built because he was tired of Grammarly. Issues and pull requests are welcome.</p>
+      <div class="actions reveal">
+        <a class="btn" href="https://github.com/ronin1102-tech/grammar-tool">View on GitHub</a>
+        <a class="btn ghost" href="https://github.com/ronin1102-tech/grammar-tool/issues">Open an issue</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap next-prod">
+    <a href="../voice/">← Solstice Voice</a>
+    <a href="../docs/">Next: SolsticeDocs →</a>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="wrap foot">
+    <a class="brand" href="../"><span class="brand-mark"></span>Solstice AI</a>
+    <nav aria-label="Contact"><a href="mailto:ronin1102@gmail.com">ronin1102@gmail.com</a><a href="https://github.com/ronin1102-tech">GitHub</a><a href="https://instagram.com/solsticeaudio_dsp" rel="noopener">Instagram · Audio</a><a href="https://instagram.com/sol_sticeai" rel="noopener">Instagram · AI</a></nav>
+  </div>
+</footer>
+<script type="module" src="../product.js"></script>
+</body>
+</html>

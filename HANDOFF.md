@@ -49,3 +49,21 @@ Branding is **Solstice AI** (header, footer, page title) — this is the AI page
 ## History notes
 - `main` previously held a Vite/TypeScript scaffold ("Scaffold Solstice site", `785be65`). Replaced at Tracy's request via a merge that keeps only the static site; the scaffold remains in git history.
 - Working branch: `claude/new-session-kjtlo8` (in sync with `main`). PR #1 was opened earlier and is superseded.
+
+---
+
+## Premium polish pass + product pages (2026-10-14)
+
+**QA fixes (Vesper):** dead `data-slot` placeholder removed · `scroll-margin-top` on every anchor target · skip-to-content link · gold `:focus-visible` rings (product cards ring the whole card) · Open Graph + Twitter Card tags on every page, using `assets/og-image.jpg` (a 1200×630 crop of the hero photo, so previews aren't cropped awkwardly; the hero photo itself is untouched).
+
+**Polish:** blue/gold ambient glow over the hero screen (CSS only, moves with the parallax) · the eclipse now overlaps the hero's fade, the hero copy lifts away on scroll, and the corona only starts forming once it's in view · stronger corona (hot limb, bloom, slow streamers, a diamond-ring bead during formation, gold sparks, scales to fit phones) · cards get a cursor spotlight, lift, and inner glow · section rhythm on one spacing scale, pull quote resized, Philosophy/Products labels are real `h2`s.
+
+**Product pages:** `voice/`, `grammar/`, `docs/` built from `solstice-website-product-details-spec.md`. Shared `product.css` + `product.js` (scroll reveals, live demos, copy buttons). Homepage cards link through with a View Transitions morph (Chrome/Edge/Safari 18+; plain navigation elsewhere). All motion respects `prefers-reduced-motion`.
+
+### Open items for Tracy
+- **Voice checkout:** "Get Solstice Voice" opens an email until Stripe/Gumroad is picked.
+- **Docs notify:** "Get notified" opens an email until an email-capture service is picked.
+- **Grammar license:** the spec says MIT, but the grammar-tool repo has no LICENSE file, so the page says "free and open source" without naming a license. Add a LICENSE to the repo, then "MIT" can go on the page.
+- **Docs claims softened to match the repo:** import is from a file dialog (not drag-and-drop yet), and annotations are highlights and underlines (notes aren't mentioned). Export is marked "Final testing" until the two phase-gate checks pass.
+- **Voice "Languages" tile** says it's built on Whisper, which recognizes many languages. Confirm which model ships before claiming a specific language list.
+- Assets still wanted: app screenshots, a Voice demo GIF, an extension screenshot.
