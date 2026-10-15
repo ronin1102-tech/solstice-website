@@ -97,3 +97,60 @@ document.querySelectorAll('.code').forEach(block => {
   });
   block.append(btn);
 });
+
+// Ledger: monthly → weekly → today, with tag-once auto-categorization. In-memory only.
+const ledger = document.querySelector('[data-ledger]');
+if (ledger) {
+  const budget = ledger.querySelector('[name=budget]'), form = ledger.querySelector('.ld-form');
+  const tagBox = ledger.querySelector('.ld-tag'), list = ledger.querySelector('.ld-list');
+  const weekOut = ledger.querySelector('[data-out=week]'), todayOut = ledger.querySelector('[data-out=today]');
+  const learned = { coffee: 'Food', groceries: 'Food', lunch: 'Food', uber: 'Transport', gas: 'Transport', bus: 'Transport', rent: 'Home', netflix: 'Bills', phone: 'Bills', movie: 'Fun' };
+  let spent = 0, pending = null, shown = 47;
+  const money = n => `${n < 0 ? '−' : ''}$${Math.abs(n).toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
+
+  function render() {
+    const weekly = (+budget.value || 0) * 12 / 52, today = weekly / 7 - spent;
+    weekOut.textContent = money(weekly);
+    todayOut.parentElement.classList.toggle('over', today < 0);
+    // ease the daily number toward its new value so changes register
+    const from = shown, start = performance.now(), dur = reduce ? 0 : 500;
+    shown = today;
+    (function tick(now) {
+      const k = dur ? Math.min((now - start) / dur, 1) : 1;
+      todayOut.textContent = money(from + (today - from) * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(tick);
+    })(start);
+  }
+
+  function add({ desc, amt, cat, how }) {
+    spent += amt;
+    const li = document.createElement('li');
+    const d = Object.assign(document.createElement('span'), { className: 'd', textContent: desc });
+    const c = Object.assign(document.createElement('span'), { className: 'c', textContent: cat });
+    c.append(Object.assign(document.createElement('em'), { textContent: how }));
+    const a = Object.assign(document.createElement('span'), { className: 'a', textContent: `−$${amt.toFixed(2)}` });
+    li.append(d, c, a);
+    list.prepend(li);
+    while (list.children.length > 5) list.lastChild.remove();
+    render();
+  }
+
+  budget.addEventListener('input', render);
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const desc = form.desc.value.trim(), amt = Math.round(parseFloat(form.amt.value) * 100) / 100;
+    if (!desc || !(amt > 0)) return;
+    const key = desc.toLowerCase().split(/\s+/)[0];
+    form.reset();
+    if (learned[key]) { add({ desc, amt, cat: learned[key], how: 'Auto' }); tagBox.hidden = true; form.desc.focus(); }
+    else { pending = { desc, amt, key }; tagBox.hidden = false; tagBox.querySelector('button').focus(); }
+  });
+  tagBox.addEventListener('click', e => {
+    const cat = e.target.dataset?.cat;
+    if (!cat || !pending) return;
+    learned[pending.key] = cat;
+    add({ desc: pending.desc, amt: pending.amt, cat, how: 'Tagged' });
+    pending = null; tagBox.hidden = true; form.desc.focus();
+  });
+  render();
+}

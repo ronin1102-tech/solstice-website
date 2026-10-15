@@ -67,3 +67,11 @@ Branding is **Solstice AI** (header, footer, page title) — this is the AI page
 - **Docs claims softened to match the repo:** import is from a file dialog (not drag-and-drop yet), and annotations are highlights and underlines (notes aren't mentioned). Export is marked "Final testing" until the two phase-gate checks pass.
 - **Voice "Languages" tile** says it's built on Whisper, which recognizes many languages. Confirm which model ships before claiming a specific language list.
 - Assets still wanted: app screenshots, a Voice demo GIF, an extension screenshot.
+
+## Ledger page (2026-10-15)
+
+`ledger/` is built from `Ledger_Product_Page_Spec.md` and added as the fourth homepage card (the products grid is now 2×2). It has a blue "Free" badge, a daily-number ring as the hero art, and an interactive demo: set a monthly budget, add purchases, and tag an unknown purchase once so the same merchant is auto-tagged next time. The demo runs only in memory, so nothing leaves the page. The page also has the cloud comparison, six features, the Vanguard Ops story, and cross-links to Voice and Docs. Docs' "Next" link now points to Ledger.
+
+### Open items for Tracy
+- **Ledger download:** the spec calls for a Google Drive link. Until there is one, "Free download" opens an email.
+- Assets still wanted: a Ledger screenshot and a demo GIF.
